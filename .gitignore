@@ -15,8 +15,6 @@ target/
 
 ### IntelliJ IDEA ###
 .idea
-checkstyle.xml
-
 *.iws
 *.iml
 *.ipr
