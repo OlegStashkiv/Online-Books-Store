@@ -46,13 +46,13 @@ public class Book {
 
     @ManyToMany
     @JoinTable(
-            name = "user_role",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id")
+            name = "book_category",
+            joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "category_id")
     )
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
-    private Set<Role> roles = new HashSet<>();
+    private Set<Category> categories = new HashSet<>();
 
     @Column(nullable = false)
     private boolean isDeleted = false;
