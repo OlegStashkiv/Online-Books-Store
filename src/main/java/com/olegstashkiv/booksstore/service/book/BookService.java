@@ -1,8 +1,8 @@
-package com.olegstashkiv.booksstore.service;
+package com.olegstashkiv.booksstore.service.book;
 
-import com.olegstashkiv.booksstore.dto.BookDto;
-import com.olegstashkiv.booksstore.dto.BookSearchParameters;
-import com.olegstashkiv.booksstore.dto.CreateBookRequestDto;
+import com.olegstashkiv.booksstore.dto.book.BookDto;
+import com.olegstashkiv.booksstore.dto.book.BookSearchParameters;
+import com.olegstashkiv.booksstore.dto.book.CreateBookRequestDto;
 import java.util.List;
 import org.springframework.data.domain.Pageable;
 

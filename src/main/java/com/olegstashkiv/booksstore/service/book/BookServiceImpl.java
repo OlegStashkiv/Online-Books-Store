@@ -1,14 +1,13 @@
-package com.olegstashkiv.booksstore.service.impl;
+package com.olegstashkiv.booksstore.service.book;
 
-import com.olegstashkiv.booksstore.dto.BookDto;
-import com.olegstashkiv.booksstore.dto.BookSearchParameters;
-import com.olegstashkiv.booksstore.dto.CreateBookRequestDto;
+import com.olegstashkiv.booksstore.dto.book.BookDto;
+import com.olegstashkiv.booksstore.dto.book.BookSearchParameters;
+import com.olegstashkiv.booksstore.dto.book.CreateBookRequestDto;
 import com.olegstashkiv.booksstore.exception.EntityNotFoundException;
 import com.olegstashkiv.booksstore.mapper.BookMapper;
 import com.olegstashkiv.booksstore.model.Book;
 import com.olegstashkiv.booksstore.repository.book.BookRepository;
 import com.olegstashkiv.booksstore.repository.book.BookSpecificationBuilder;
-import com.olegstashkiv.booksstore.service.BookService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
