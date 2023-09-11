@@ -44,16 +44,6 @@ public class Book {
 
     private String coverImage;
 
-    @ManyToMany
-    @JoinTable(
-            name = "user_role",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id")
-    )
-    @EqualsAndHashCode.Exclude
-    @ToString.Exclude
-    private Set<Role> roles = new HashSet<>();
-
     @Column(nullable = false)
     private boolean isDeleted = false;
 }
