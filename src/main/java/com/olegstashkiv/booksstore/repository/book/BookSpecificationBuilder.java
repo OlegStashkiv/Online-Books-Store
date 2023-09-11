@@ -1,6 +1,6 @@
 package com.olegstashkiv.booksstore.repository.book;
 
-import com.olegstashkiv.booksstore.dto.BookSearchParameters;
+import com.olegstashkiv.booksstore.dto.book.BookSearchParameters;
 import com.olegstashkiv.booksstore.model.Book;
 import com.olegstashkiv.booksstore.repository.SpecificationBuilder;
 import com.olegstashkiv.booksstore.repository.SpecificationProviderManager;
