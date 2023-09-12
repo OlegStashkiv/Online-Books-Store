@@ -15,10 +15,16 @@ import org.mapstruct.Mapping;
 public interface BookMapper {
     BookDto toDto(Book book);
 
-    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "categories", source = "categoryIds")
     Book toModel(CreateBookRequestDto requestDto);
 
     BookDtoWithoutCategoryIds toDtoWithoutCategories(Book book);
+
+    default Set<Long> mapToLongSet(Set<Category> categories) {
+        return categories.stream()
+                .map(Category::getId)
+                .collect(Collectors.toSet());
+    }
 
     default Set<Category> mapToCategorySet(Set<Long> categoryIds) {
         return categoryIds.stream()
@@ -27,12 +33,6 @@ public interface BookMapper {
                     category.setId(id);
                     return category;
                 })
-                .collect(Collectors.toSet());
-    }
-
-    default Set<Long> map(Set<Category> value) {
-        return value.stream()
-                .map(Category::getId)
                 .collect(Collectors.toSet());
     }
 }
