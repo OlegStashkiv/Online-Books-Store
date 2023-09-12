@@ -6,3 +6,4 @@ databaseChangeLog:
          -  renameTable:
               newTableName:  roles
               oldTableName:  role
+

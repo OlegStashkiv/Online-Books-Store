@@ -6,3 +6,4 @@ databaseChangeLog:
          -  renameTable:
               newTableName:  users
               oldTableName:  user
+
