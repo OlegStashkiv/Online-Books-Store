@@ -1,4 +1,4 @@
-package com.olegstashkiv.booksstore.service.book;
+package com.olegstashkiv.booksstore.service;
 
 import com.olegstashkiv.booksstore.dto.book.BookDto;
 import com.olegstashkiv.booksstore.dto.book.BookSearchParameters;

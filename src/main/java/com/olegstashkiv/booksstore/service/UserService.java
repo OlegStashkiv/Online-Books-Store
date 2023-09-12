@@ -1,4 +1,4 @@
-package com.olegstashkiv.booksstore.service.user;
+package com.olegstashkiv.booksstore.service;
 
 import com.olegstashkiv.booksstore.dto.user.UserRegistrationRequestDto;
 import com.olegstashkiv.booksstore.dto.user.UserRegistrationResponseDto;

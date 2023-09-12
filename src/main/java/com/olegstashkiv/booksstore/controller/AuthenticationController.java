@@ -5,7 +5,7 @@ import com.olegstashkiv.booksstore.dto.user.UserLoginResponseDto;
 import com.olegstashkiv.booksstore.dto.user.UserRegistrationRequestDto;
 import com.olegstashkiv.booksstore.dto.user.UserRegistrationResponseDto;
 import com.olegstashkiv.booksstore.security.AuthenticationService;
-import com.olegstashkiv.booksstore.service.user.UserService;
+import com.olegstashkiv.booksstore.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
