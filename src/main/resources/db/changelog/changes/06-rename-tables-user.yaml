@@ -6,4 +6,3 @@ databaseChangeLog:
          -  renameTable:
               newTableName:  users
               oldTableName:  user
-              schemaName:  book_store
