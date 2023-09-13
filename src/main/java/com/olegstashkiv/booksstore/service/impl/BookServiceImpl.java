@@ -1,4 +1,4 @@
-package com.olegstashkiv.booksstore.service.book;
+package com.olegstashkiv.booksstore.service.impl;
 
 import com.olegstashkiv.booksstore.dto.book.BookDto;
 import com.olegstashkiv.booksstore.dto.book.BookSearchParameters;
@@ -8,6 +8,7 @@ import com.olegstashkiv.booksstore.mapper.BookMapper;
 import com.olegstashkiv.booksstore.model.Book;
 import com.olegstashkiv.booksstore.repository.book.BookRepository;
 import com.olegstashkiv.booksstore.repository.book.BookSpecificationBuilder;
+import com.olegstashkiv.booksstore.service.BookService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
@@ -29,14 +30,14 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<BookDto> findAll(Pageable pageable) {
-        return bookRepository.findAll(pageable).stream()
+        return bookRepository.findAllWithCategories(pageable).stream()
                 .map(bookMapper::toDto)
                 .toList();
     }
 
     @Override
     public BookDto findById(Long id) {
-        Book book = bookRepository.findById(id).orElseThrow(
+        Book book = bookRepository.findByIdWithCategories(id).orElseThrow(
                 () -> new EntityNotFoundException("Can`t find book by id: " + id)
         );
         return bookMapper.toDto(book);

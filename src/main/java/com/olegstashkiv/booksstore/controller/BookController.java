@@ -3,7 +3,7 @@ package com.olegstashkiv.booksstore.controller;
 import com.olegstashkiv.booksstore.dto.book.BookDto;
 import com.olegstashkiv.booksstore.dto.book.BookSearchParameters;
 import com.olegstashkiv.booksstore.dto.book.CreateBookRequestDto;
-import com.olegstashkiv.booksstore.service.book.BookService;
+import com.olegstashkiv.booksstore.service.BookService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;

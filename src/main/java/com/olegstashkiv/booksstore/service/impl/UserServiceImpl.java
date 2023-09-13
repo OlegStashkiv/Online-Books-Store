@@ -1,4 +1,4 @@
-package com.olegstashkiv.booksstore.service.user;
+package com.olegstashkiv.booksstore.service.impl;
 
 import com.olegstashkiv.booksstore.dto.user.UserRegistrationRequestDto;
 import com.olegstashkiv.booksstore.dto.user.UserRegistrationResponseDto;
@@ -9,6 +9,7 @@ import com.olegstashkiv.booksstore.model.User;
 import com.olegstashkiv.booksstore.model.enums.RoleName;
 import com.olegstashkiv.booksstore.repository.role.RoleRepository;
 import com.olegstashkiv.booksstore.repository.user.UserRepository;
+import com.olegstashkiv.booksstore.service.UserService;
 import java.util.HashSet;
 import java.util.Set;
 import lombok.RequiredArgsConstructor;
