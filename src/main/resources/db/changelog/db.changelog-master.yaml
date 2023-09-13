@@ -21,3 +21,9 @@ databaseChangeLog:
       file: db/changelog/changes/10-add-admin-user-to-db.yaml
   - include:
       file: db/changelog/changes/11-add-default-categories.yaml
+  - include:
+      file: db/changelog/changes/12-create-shopping_cards-table.yaml
+  - include:
+      file: db/changelog/changes/13-create-cart_items_table.yaml
+  - include:
+      file: db/changelog/changes/14-create-shopping_cart_cart-item-table.yaml
