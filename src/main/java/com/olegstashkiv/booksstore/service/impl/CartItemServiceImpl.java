@@ -12,8 +12,9 @@ import com.olegstashkiv.booksstore.repository.cartitem.CartItemRepository;
 import com.olegstashkiv.booksstore.repository.shopingcart.ShoppingCartRepository;
 import com.olegstashkiv.booksstore.service.CartItemService;
 import com.olegstashkiv.booksstore.service.UserService;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -66,7 +67,7 @@ public class CartItemServiceImpl implements CartItemService {
                 .orElseThrow(
                         () -> new EntityNotFoundException("Can't find shopping cart by id: " + id));
         cartItem.setShoppingCart(shoppingCart);
-        List<CartItem> cartItems = new ArrayList<>();
+        Set<CartItem> cartItems = new HashSet<>();
         cartItems.add(cartItem);
         if (shoppingCart.getCartItems().isEmpty()) {
             shoppingCart.setCartItems(cartItems);

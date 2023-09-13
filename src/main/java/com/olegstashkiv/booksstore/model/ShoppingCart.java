@@ -11,7 +11,7 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import java.util.List;
+import java.util.Set;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -32,13 +32,13 @@ public class ShoppingCart {
     @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
     private User user;
 
-    @ManyToMany
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @ManyToMany
     @JoinTable(name = "shopping_cart_cart_item",
             joinColumns = @JoinColumn(name = "shopping_cart_id"),
             inverseJoinColumns = @JoinColumn(name = "cart_item_id"))
-    private List<CartItem> cartItems;
+    private Set<CartItem> cartItems;
 
     @Column(nullable = false)
     private boolean isDeleted = false;
