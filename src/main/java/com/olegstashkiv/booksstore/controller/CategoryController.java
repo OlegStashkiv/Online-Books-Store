@@ -3,6 +3,7 @@ package com.olegstashkiv.booksstore.controller;
 import com.olegstashkiv.booksstore.dto.book.BookDtoWithoutCategoryIds;
 import com.olegstashkiv.booksstore.dto.category.CategoryDto;
 import com.olegstashkiv.booksstore.dto.category.CreateCategoryRequestDto;
+import com.olegstashkiv.booksstore.service.BookService;
 import com.olegstashkiv.booksstore.service.CategoryService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -29,6 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/categories")
 public class CategoryController {
     private final CategoryService categoryService;
+    private final BookService bookService;
 
     @GetMapping
     @Operation(summary = "Get all categories", description = "Get a set of categories")

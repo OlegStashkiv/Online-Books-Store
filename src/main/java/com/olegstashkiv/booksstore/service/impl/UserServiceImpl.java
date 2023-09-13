@@ -5,14 +5,19 @@ import com.olegstashkiv.booksstore.dto.user.UserRegistrationResponseDto;
 import com.olegstashkiv.booksstore.exception.RegistrationException;
 import com.olegstashkiv.booksstore.mapper.UserMapper;
 import com.olegstashkiv.booksstore.model.Role;
+import com.olegstashkiv.booksstore.model.ShoppingCart;
 import com.olegstashkiv.booksstore.model.User;
 import com.olegstashkiv.booksstore.model.enums.RoleName;
 import com.olegstashkiv.booksstore.repository.role.RoleRepository;
+import com.olegstashkiv.booksstore.repository.shopingcart.ShoppingCartRepository;
 import com.olegstashkiv.booksstore.repository.user.UserRepository;
 import com.olegstashkiv.booksstore.service.UserService;
 import java.util.HashSet;
 import java.util.Set;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
@@ -23,6 +28,7 @@ public class UserServiceImpl implements UserService {
     private final RoleRepository roleRepository;
     private final PasswordEncoder encoder;
     private final UserMapper userMapper;
+    private final ShoppingCartRepository shoppingCartRepository;
 
     @Override
     public UserRegistrationResponseDto register(
@@ -45,8 +51,20 @@ public class UserServiceImpl implements UserService {
                         + RoleName.ROLE_USER));
         roles.add(defaultRole);
         user.setRoles(roles);
-        User savedUser = userRepository.save(user);
 
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setUser(user);
+        shoppingCartRepository.save(shoppingCart);
+        User savedUser = userRepository.save(user);
         return userMapper.toUserResponse(savedUser);
+    }
+
+    @Override
+    public User getAuthenticatedUser() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return userRepository.findByEmail(authentication.getName()).orElseThrow(
+                () -> new UsernameNotFoundException("Can't find a user with email "
+                        + authentication.getName())
+        );
     }
 }
