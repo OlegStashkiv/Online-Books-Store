@@ -1,7 +1,7 @@
 package com.olegstashkiv.booksstore.security;
 
 import com.olegstashkiv.booksstore.exception.UserNotFoundException;
-import com.olegstashkiv.booksstore.repository.user.UserRepository;
+import com.olegstashkiv.booksstore.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

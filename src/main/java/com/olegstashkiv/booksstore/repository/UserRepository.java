@@ -1,4 +1,4 @@
-package com.olegstashkiv.booksstore.repository.user;
+package com.olegstashkiv.booksstore.repository;
 
 import com.olegstashkiv.booksstore.model.User;
 import java.util.Optional;

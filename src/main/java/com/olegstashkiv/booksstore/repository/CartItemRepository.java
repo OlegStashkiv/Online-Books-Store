@@ -1,4 +1,4 @@
-package com.olegstashkiv.booksstore.repository.cartitem;
+package com.olegstashkiv.booksstore.repository;
 
 import com.olegstashkiv.booksstore.model.CartItem;
 import java.util.List;
