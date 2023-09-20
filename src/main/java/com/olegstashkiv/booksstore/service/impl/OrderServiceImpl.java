@@ -61,7 +61,9 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderDto addOrder(CreateOrderRequestDto requestDto, Long shoppingCartId) {
         ShoppingCart shoppingCart = shoppingCartRepository.findById(shoppingCartId).orElseThrow(
-                () -> new EntityNotFoundException("Cant find shopping Cart by id: " + shoppingCartId)
+                () -> new EntityNotFoundException(
+                        "Cant find shopping Cart by id: " + shoppingCartId
+                )
         );
         Set<CartItem> cartItems = new HashSet<>(
                 cartItemRepository.findCartItemsByShoppingCartId(shoppingCartId));
