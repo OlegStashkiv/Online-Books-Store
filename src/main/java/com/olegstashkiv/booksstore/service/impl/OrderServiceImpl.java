@@ -67,6 +67,7 @@ public class OrderServiceImpl implements OrderService {
         );
         Set<CartItem> cartItems = new HashSet<>(
                 cartItemRepository.findCartItemsByShoppingCartId(shoppingCartId));
+
         shoppingCart.setCartItems(cartItems);
         Order order = orderMapper.toOrderFromCart(shoppingCart);
         order.setShippingAddress(requestDto.getShippingAddress());
