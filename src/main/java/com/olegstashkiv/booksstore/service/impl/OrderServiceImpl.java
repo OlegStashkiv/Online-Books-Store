@@ -59,12 +59,12 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public OrderDto addOrder(CreateOrderRequestDto requestDto, Long id) {
-        ShoppingCart shoppingCart = shoppingCartRepository.findById(id).orElseThrow(
-                () -> new EntityNotFoundException("Cant find shopping Cart by id: " + id)
+    public OrderDto addOrder(CreateOrderRequestDto requestDto, Long shoppingCartId) {
+        ShoppingCart shoppingCart = shoppingCartRepository.findById(shoppingCartId).orElseThrow(
+                () -> new EntityNotFoundException("Cant find shopping Cart by id: " + shoppingCartId)
         );
         Set<CartItem> cartItems = new HashSet<>(
-                cartItemRepository.findCartItemsByShoppingCartId(id));
+                cartItemRepository.findCartItemsByShoppingCartId(shoppingCartId));
         shoppingCart.setCartItems(cartItems);
         Order order = orderMapper.toOrderFromCart(shoppingCart);
         order.setShippingAddress(requestDto.getShippingAddress());
