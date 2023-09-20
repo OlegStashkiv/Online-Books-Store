@@ -1,4 +1,4 @@
-package com.olegstashkiv.booksstore.repository.category;
+package com.olegstashkiv.booksstore.repository;
 
 import com.olegstashkiv.booksstore.model.Book;
 import com.olegstashkiv.booksstore.model.Category;

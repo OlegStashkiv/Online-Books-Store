@@ -6,7 +6,7 @@ import com.olegstashkiv.booksstore.dto.shopingcart.ShoppingCartDto;
 import com.olegstashkiv.booksstore.exception.EntityNotFoundException;
 import com.olegstashkiv.booksstore.model.ShoppingCart;
 import com.olegstashkiv.booksstore.model.User;
-import com.olegstashkiv.booksstore.repository.shopingcart.ShoppingCartRepository;
+import com.olegstashkiv.booksstore.repository.ShoppingCartRepository;
 import com.olegstashkiv.booksstore.service.CartItemService;
 import com.olegstashkiv.booksstore.service.ShoppingCartService;
 import com.olegstashkiv.booksstore.service.UserService;

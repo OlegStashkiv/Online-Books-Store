@@ -7,7 +7,7 @@ import com.olegstashkiv.booksstore.exception.EntityNotFoundException;
 import com.olegstashkiv.booksstore.mapper.BookMapper;
 import com.olegstashkiv.booksstore.mapper.CategoryMapper;
 import com.olegstashkiv.booksstore.model.Category;
-import com.olegstashkiv.booksstore.repository.category.CategoryRepository;
+import com.olegstashkiv.booksstore.repository.CategoryRepository;
 import com.olegstashkiv.booksstore.service.CategoryService;
 import java.util.List;
 import java.util.Set;

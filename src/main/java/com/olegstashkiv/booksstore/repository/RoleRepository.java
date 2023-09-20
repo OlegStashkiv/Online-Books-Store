@@ -1,4 +1,4 @@
-package com.olegstashkiv.booksstore.repository.role;
+package com.olegstashkiv.booksstore.repository;
 
 import com.olegstashkiv.booksstore.model.Role;
 import com.olegstashkiv.booksstore.model.enums.RoleName;
