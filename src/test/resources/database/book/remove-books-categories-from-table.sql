@@ -1,5 +1,5 @@
 DELETE FROM book_category;
 
-DELETE FROM book;
+DELETE FROM books;
 
-DELETE FROM category;
+DELETE FROM categories;

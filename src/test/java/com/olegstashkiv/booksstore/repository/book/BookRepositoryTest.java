@@ -33,23 +33,23 @@ class BookRepositoryTest {
     void setUp() {
         expectedBook1 = new Book();
         expectedBook1.setId(1L);
-        expectedBook1.setAuthor("Test Author 1");
-        expectedBook1.setTitle("Test Title 1");
+        expectedBook1.setAuthor("Test Author First");
+        expectedBook1.setTitle("Test Title First");
         expectedBook1.setIsbn("978-0262033848");
         expectedBook1.setDescription("Test Description for Book 1");
         expectedBook1.setPrice(BigDecimal.valueOf(500));
-        expectedBook1.setCoverImage("TestImage1.png");
-        expectedBook1.setCategories(Set.of(categoryRepository.findById(1L).get()));
+        expectedBook1.setCoverImage("http://example.com/test.jpg");
+        expectedBook1.setCategories(Set.of(categoryRepository.findById(10L).get()));
 
         expectedBook2 = new Book();
-        expectedBook2.setId(1L);
-        expectedBook2.setAuthor("Test Author 2");
-        expectedBook2.setTitle("Test Title 2");
+        expectedBook2.setId(2L);
+        expectedBook2.setAuthor("Test Author Second");
+        expectedBook2.setTitle("Test Title Second");
         expectedBook2.setIsbn("978-0-9767736-6-5");
         expectedBook2.setDescription("Test Description for Book 2");
-        expectedBook2.setCoverImage("TestImage2.png");
+        expectedBook2.setCoverImage("http://example.com/test.jpg");
         expectedBook2.setPrice(BigDecimal.valueOf(300));
-        expectedBook2.setCategories(Set.of(categoryRepository.findById(2L).get()));
+        expectedBook2.setCategories(Set.of(categoryRepository.findById(20L).get()));
     }
 
     @Test
@@ -90,7 +90,7 @@ class BookRepositoryTest {
     @Sql(scripts = {
             "classpath:database/book/remove-books-categories-from-table.sql"
     },executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
-    @DisplayName("Find a book by id with categories with an invalid id")
+    @DisplayName("Find all books by id with categories with valid id")
     void findAllBooks_ValidRequest_ListOfBooks() {
         Pageable pageable = Pageable.ofSize(10);
         List<Book> actual = bookRepository.findAllWithCategories(pageable);
