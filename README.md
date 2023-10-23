@@ -82,4 +82,4 @@ Before you start testing the application, you should make sure that you have ins
 > This collection is attached to the project: _Book Store.postman_collection_
 
 In addition you can watch a short video to get acquainted with the work flow:
- - [https://www.loom.com/share/c8e1fe76396d4278878da3d5fd323cd1?sid=7bf1a99b-294d-4eea-ae54-cce4fa43c443](https://www.loom.com/share/4a725b65c3d742ee96acde9c2ae7d6cd?sid=c25cab66-f402-4925-8799-8f4eb513b5a1)https://www.loom.com/share/4a725b65c3d742ee96acde9c2ae7d6cd?sid=c25cab66-f402-4925-8799-8f4eb513b5a1
+ - https://www.loom.com/share/4a725b65c3d742ee96acde9c2ae7d6cd?sid=c25cab66-f402-4925-8799-8f4eb513b5a1
