@@ -1,4 +1,4 @@
-# Book Store API 
+# Book Store API !
 Welcome to the Book Store API.
 This specialized API is designed to provide and simplify bookstore management services.
 You can use it as well to manage the business processes of your existing store.
@@ -56,8 +56,8 @@ Our API consists of several controllers, each serving a specific purpose:
 
 Before you start testing the application, you should make sure that you have installed such technologies as:
 - Java Development Kit (JDK);
-- MySQL/PostgreSQL or another preferable relational database;
-- Maven (for building the project);
+- MySQL/PostgreSQL or another preferable relational database (not required if running through docker);
+- Maven (not required if using maven wrapper);
 - Docker (for running project in virtual container);
 
 ### Installation
@@ -80,3 +80,6 @@ Before you start testing the application, you should make sure that you have ins
 
 > **Additionally**: To work with the application, you can use a previously prepared PostMan collection. 
 > This collection is attached to the project: _Book Store.postman_collection_
+
+In addition you can watch a short video to get acquainted with the work flow:
+ - https://www.loom.com/share/c8e1fe76396d4278878da3d5fd323cd1?sid=7bf1a99b-294d-4eea-ae54-cce4fa43c443
